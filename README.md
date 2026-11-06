@@ -29,6 +29,8 @@ El segundo ejercicio, [Database First e ingeniería inversa](ejercicios/02-datab
 
 Los proyectos descargados del instructor se conservan aparte como referencia. El certificado y el respaldo de base de datos todavía no se han publicado.
 
+La práctica de [Data Annotations y validaciones](ejercicios/03-validaciones/README.md) incluye comprobaciones ejecutables de entradas válidas e inválidas.
+
 ## Próximas etapas
 
 1. Continuar con el siguiente tema del curso en un ejercicio separado.
