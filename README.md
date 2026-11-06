@@ -19,14 +19,15 @@ La cuenta de Udemy muestra **168 de 168 elementos completados** y el certificado
 
 ## Estado del repositorio
 
-Este primer avance contiene únicamente la presentación del proyecto. El código, el certificado y los recursos de base de datos se incorporarán en etapas posteriores, después de revisar su contenido y su origen.
+Los ejercicios se están reconstruyendo a partir de los temas y materiales del curso porque los archivos de práctica originales se perdieron. El código de cada reconstrucción se escribe de nuevo y se verifica ahora; no se presenta como una recuperación de aquellos archivos ni como trabajo realizado en fechas anteriores.
 
-Los ejemplos descargados del instructor se distinguirán de los ejercicios y modificaciones propios. Cada proyecto que se incorpore tendrá su objetivo, atribución y pasos de ejecución comprobados.
+El primer ejercicio es [Code First: modelos, contexto y migración](ejercicios/01-code-first/README.md). Incluye `Categoria`, `Usuario`, un contexto EF Core y la generación del esquema SQL Server. Sus instrucciones distinguen las comprobaciones sin conexión de la creación opcional de una base local.
+
+Los proyectos descargados del instructor se conservan aparte como referencia. El certificado y el respaldo de base de datos todavía no se han publicado.
 
 ## Próximas etapas
 
-1. Revisar y preparar un primer ejercicio con su configuración de ejemplo, sin credenciales.
-2. Incorporar ese ejercicio en un commit descriptivo.
-3. Añadir el certificado y una base de demostración revisada en cambios separados.
+1. Continuar con el siguiente tema del curso en un ejercicio separado.
+2. Añadir el certificado y una base de demostración revisada en cambios separados.
 
 El historial reflejará avances reales con fechas actuales. Este repositorio corresponde exclusivamente a este curso; los otros cursos se organizarán por separado.

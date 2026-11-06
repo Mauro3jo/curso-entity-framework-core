@@ -1,0 +1,37 @@
+# Archivos de desarrollo .NET
+**/bin/
+**/obj/
+.vs/
+.idea/
+*.user
+*.suo
+TestResults/
+
+# Configuración local y credenciales
+.env
+.env.*
+!.env.example
+**/appsettings.json
+**/appsettings.*.json
+!**/appsettings.example.json
+**/secrets.json
+*.pfx
+*.p12
+*.pem
+*.key
+
+# Descargas, instaladores, respaldos y certificado personal
+*.rar
+*.zip
+*.7z
+*.exe
+*.msi
+*.bak
+*.mdf
+*.ldf
+/database/backups/
+UC-*.pdf
+
+# Sistema operativo
+Thumbs.db
+.DS_Store
