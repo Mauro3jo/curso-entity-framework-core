@@ -23,6 +23,8 @@ Los ejercicios se están reconstruyendo a partir de los temas y materiales del c
 
 El primer ejercicio es [Code First: modelos, contexto y migración](ejercicios/01-code-first/README.md). Incluye `Categoria`, `Usuario`, un contexto EF Core y la generación del esquema SQL Server. Sus instrucciones distinguen las comprobaciones sin conexión de la creación opcional de una base local.
 
+La siguiente práctica del mismo ejercicio muestra la [evolución del modelo y una migración incremental](ejercicios/01-code-first/evolucion-del-modelo.md): agregar una columna opcional y revisar qué ocurriría al revertirla.
+
 Los proyectos descargados del instructor se conservan aparte como referencia. El certificado y el respaldo de base de datos todavía no se han publicado.
 
 ## Próximas etapas

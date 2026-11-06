@@ -27,10 +27,12 @@ La consola imprime las sentencias `CREATE TABLE` de `Categorias` y `Usuarios`. G
 
 ```powershell
 dotnet ef migrations has-pending-model-changes --project ejercicios/01-code-first
-dotnet ef migrations script --project ejercicios/01-code-first --output ejercicios/01-code-first/esquema-inicial.sql
+dotnet ef migrations script 0 Inicial --project ejercicios/01-code-first --output ejercicios/01-code-first/esquema-inicial.sql
 ```
 
 La migración inicial y su snapshot están versionados en `Migrations/`. El script permite revisar el esquema y la tabla de historial de migraciones sin conectarse a SQL Server.
+
+El script `esquema-inicial.sql` conserva la primera versión del esquema. El modelo actual incorpora además una descripción opcional de categoría mediante una segunda migración. Véase [Evolución del modelo](evolucion-del-modelo.md) para generar el cambio incremental y comprender su reversión.
 
 ## Crear una base de práctica, opcional
 
