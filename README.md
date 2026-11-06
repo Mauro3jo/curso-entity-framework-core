@@ -25,6 +25,8 @@ El primer ejercicio es [Code First: modelos, contexto y migración](ejercicios/0
 
 La siguiente práctica del mismo ejercicio muestra la [evolución del modelo y una migración incremental](ejercicios/01-code-first/evolucion-del-modelo.md): agregar una columna opcional y revisar qué ocurriría al revertirla.
 
+El segundo ejercicio, [Database First e ingeniería inversa](ejercicios/02-database-first/README.md), parte de una base nueva con dos categorías ficticias y genera el modelo desde SQL Server. Incluye el script para reproducir esa base de práctica sin utilizar el respaldo original.
+
 Los proyectos descargados del instructor se conservan aparte como referencia. El certificado y el respaldo de base de datos todavía no se han publicado.
 
 ## Próximas etapas
