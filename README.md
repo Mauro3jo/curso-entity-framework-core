@@ -1,41 +1,23 @@
 # Entity Framework Core con .NET 10
 
-Repositorio de aprendizaje de Mauro Trejo para organizar, por etapas, los ejercicios y proyectos relacionados con el curso **Máster en Entity Framework Core con .NET 10 – Curso Completo**, de render2web.
+Ejercicios del curso **Máster en Entity Framework Core con .NET 10 – Curso Completo**, de [render2web en Udemy](https://ucic.udemy.com/course/curso-entity-framework-core/).
 
-[Ver el curso en Udemy](https://ucic.udemy.com/course/curso-entity-framework-core/).
+El curso está terminado: Udemy muestra 168 de 168 elementos completados. Los archivos de práctica originales se perdieron; estos ejemplos se reconstruyeron a partir de los temas y materiales del curso. Las descargas del profesor se usan como referencia.
 
-## Curso completado
+## Ejercicios
 
-La cuenta de Udemy muestra **168 de 168 elementos completados** y el certificado disponible. Este estado se verificó directamente en el aula del curso.
+| Tema | Código e instrucciones |
+| --- | --- |
+| Modelos y migraciones | [01. Code First](ejercicios/01-code-first/README.md) |
+| Cambios de esquema | [Evolución del modelo](ejercicios/01-code-first/evolucion-del-modelo.md) |
+| Ingeniería inversa | [02. Database First](ejercicios/02-database-first/README.md) |
+| Validaciones | [03. Data Annotations](ejercicios/03-validaciones/README.md) |
+| Relaciones y CRUD MVC | [04. Blog](ejercicios/04-blog/README.md) |
 
-## Temas del recorrido
+## Ejecutar
 
-- Modelos, contexto y migraciones con Code First.
-- Ingeniería inversa con Database First.
-- Validaciones con Data Annotations y configuración con Fluent API.
-- Relaciones entre entidades, consultas LINQ y operaciones CRUD.
-- Vistas y procedimientos almacenados de SQL Server.
-- Integración de Entity Framework Core con MySQL.
+Se necesita el SDK .NET 10. Las pruebas con SQL Server usan Windows y LocalDB; cada ejercicio indica sus requisitos y comandos. Los paquetes se restauran desde nuget.org mediante la configuración de este repositorio.
 
-## Estado del repositorio
+Hay dos bases de ejemplo persistentes en la instancia local `CodexEfCoreCurso`: una para Database First y otra para el blog. Sus datos son ficticios. Las comprobaciones de relaciones usan bases temporales propias y las eliminan al terminar.
 
-Los ejercicios se están reconstruyendo a partir de los temas y materiales del curso porque los archivos de práctica originales se perdieron. El código de cada reconstrucción se escribe de nuevo y se verifica ahora; no se presenta como una recuperación de aquellos archivos ni como trabajo realizado en fechas anteriores.
-
-El primer ejercicio es [Code First: modelos, contexto y migración](ejercicios/01-code-first/README.md). Incluye `Categoria`, `Usuario`, un contexto EF Core y la generación del esquema SQL Server. Sus instrucciones distinguen las comprobaciones sin conexión de la creación opcional de una base local.
-
-La siguiente práctica del mismo ejercicio muestra la [evolución del modelo y una migración incremental](ejercicios/01-code-first/evolucion-del-modelo.md): agregar una columna opcional y revisar qué ocurriría al revertirla.
-
-El segundo ejercicio, [Database First e ingeniería inversa](ejercicios/02-database-first/README.md), parte de una base nueva con dos categorías ficticias y genera el modelo desde SQL Server. Incluye el script para reproducir esa base de práctica sin utilizar el respaldo original.
-
-Los proyectos descargados del instructor se conservan aparte como referencia. El certificado y el respaldo de base de datos todavía no se han publicado.
-
-La práctica de [Data Annotations y validaciones](ejercicios/03-validaciones/README.md) incluye comprobaciones ejecutables de entradas válidas e inválidas.
-
-El [blog de relaciones](ejercicios/04-blog/README.md) reconstruye relaciones 1:1, 1:N y N:N y comprueba sus reglas de borrado en SQL Server.
-
-## Próximas etapas
-
-1. Continuar con el siguiente tema del curso en un ejercicio separado.
-2. Añadir el certificado y una base de demostración revisada en cambios separados.
-
-El historial reflejará avances reales con fechas actuales. Este repositorio corresponde exclusivamente a este curso; los otros cursos se organizarán por separado.
+Los commits registran el trabajo de reconstrucción con sus fechas reales. Todavía faltan los bloques de consultas avanzadas, Fluent API, SQL y MySQL. El certificado se agregará al final, después de revisar los ejercicios.
