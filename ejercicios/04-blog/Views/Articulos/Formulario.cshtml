@@ -1,0 +1,16 @@
+@model FormularioArticulo
+@{ var editar = ViewContext.RouteData.Values["action"]?.ToString() == "Editar"; }
+<!doctype html><html lang="es"><head><meta charset="utf-8"><title>Formulario de articulo</title></head><body>
+<h1>@(editar ? "Editar articulo" : "Crear articulo")</h1>
+<form method="post" asp-action="@(editar ? "Editar" : "Crear")" asp-route-id="@ViewContext.RouteData.Values["id"]">
+<div asp-validation-summary="All"></div>
+<input type="hidden" asp-for="Version">
+<p><label asp-for="Titulo"></label><input asp-for="Titulo"></p>
+<p><label asp-for="Contenido"></label><textarea asp-for="Contenido"></textarea></p>
+<p><label asp-for="TiempoLectura"></label><input asp-for="TiempoLectura"></p>
+<p><label asp-for="CategoriaId">Categoria</label><select asp-for="CategoriaId" asp-items="ViewBag.Categorias"></select></p>
+<p><label asp-for="AutorId">Autor</label><select asp-for="AutorId" asp-items="ViewBag.Autores"></select></p>
+<button>Guardar</button>
+</form>
+<a asp-action="Index">Volver</a>
+</body></html>

@@ -1,0 +1,9 @@
+@model DetalleArticulo
+<!doctype html><html lang="es"><head><meta charset="utf-8"><title>@Model.Titulo</title></head><body>
+<h1>@Model.Titulo</h1><p>@Model.Contenido</p><p>@Model.Categoria — @Model.Autor</p>
+<p>Etiquetas: @string.Join(", ", Model.Etiquetas)</p>
+<ul>@foreach(var comentario in Model.Comentarios) { <li>@comentario</li> }</ul>
+<a asp-action="Editar" asp-route-id="@Model.Id">Editar</a>
+<form asp-action="Borrar" asp-route-id="@Model.Id" method="post"><input type="hidden" name="version" value="@Model.Version"><button>Borrar articulo</button></form>
+<a asp-action="Index">Volver</a>
+</body></html>

@@ -1,0 +1,11 @@
+@model ListadoArticulos
+<!doctype html><html lang="es"><head><meta charset="utf-8"><title>Articulos de practica</title></head><body>
+<h1>Articulos de practica</h1>
+<p>Demostracion local con datos ficticios.</p>
+<form method="get"><label>Buscar <input name="buscar" value="@Model.Buscar"></label><button>Buscar</button></form>
+<p><a asp-action="Crear">Crear articulo</a></p>
+<ul>@foreach (var fila in Model.Filas) { <li><a asp-action="Detalles" asp-route-id="@fila.Id">@fila.Titulo</a> — @fila.Categoria</li> }</ul>
+<p>Pagina @Model.Pagina</p>
+@if (Model.Pagina > 1) { <a asp-route-pagina="@(Model.Pagina - 1)" asp-route-buscar="@Model.Buscar">Anterior</a> }
+@if (Model.Filas.Count == 10) { <a asp-route-pagina="@(Model.Pagina + 1)" asp-route-buscar="@Model.Buscar">Siguiente</a> }
+</body></html>
