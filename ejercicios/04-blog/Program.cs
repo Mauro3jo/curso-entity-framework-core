@@ -8,6 +8,11 @@ if (args is ["--verificar"])
 }
 
 var opciones = BlogDbContext.OpcionesDemo();
+if (args is ["--consultas"])
+{
+    await Consultas.VerificarAsync();
+    return;
+}
 if (args is ["--crear-demo"])
 {
     await using var contexto = new BlogDbContext(opciones);

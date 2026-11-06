@@ -1,5 +1,7 @@
 # 04. Blog: relaciones entre entidades
 
+Las [consultas LINQ y operaciones masivas](consultas.md) tienen una comprobación separada con `--consultas`.
+
 Reconstrucción basada en los nombres de entidades y temas de `RelacionesConEFCore.rar`: usuarios, perfiles, categorías, artículos, comentarios y etiquetas. El código y los datos de demostración se escribieron de nuevo.
 
 ```powershell
