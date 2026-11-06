@@ -1,0 +1,10 @@
+using Academia;
+using Microsoft.EntityFrameworkCore;
+
+if (args is ["--verificar"])
+    await Pruebas.FluentAsync();
+else
+{
+    using var contexto = AcademiaDbContext.Crear("EfCoreCursoAcademia05");
+    Console.WriteLine(contexto.Database.GenerateCreateScript());
+}
