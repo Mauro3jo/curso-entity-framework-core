@@ -39,4 +39,8 @@ El script compila los seis proyectos y ejecuta las comprobaciones de consola y S
 
 Hay dos bases de ejemplo persistentes en la instancia local del curso: una para Database First y otra para el blog. Sus datos son ficticios. Las demás pruebas SQL Server crean bases temporales propias y las eliminan al terminar. El respaldo original del curso no está publicado.
 
-Los commits registran el trabajo de reconstrucción con sus fechas reales. El certificado está revisado y se agregará al último, después de cerrar las pruebas pendientes.
+Los commits registran el trabajo de reconstrucción con sus fechas reales.
+
+## Certificado
+
+[Certificado de finalización del curso](certificados/certificado-entity-framework-core.pdf).
