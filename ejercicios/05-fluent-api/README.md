@@ -1,18 +1,15 @@
 # 05. Fluent API
 
-Las [vistas y procedimientos almacenados](sql.md) se prueban con `--verificar-sql`.
-
-Modelo académico reconstruido a partir de los temas de `FluentAPI_EFCore10.rar`: estudiantes, perfiles, cursos, clases e inscripciones.
+Estudiantes, perfiles, cursos, clases e inscripciones, con la configuración en `AcademiaDbContext`.
 
 ```powershell
 dotnet run --project ejercicios/05-fluent-api/Academia.csproj
 dotnet run --project ejercicios/05-fluent-api/Academia.csproj -- --verificar
+dotnet run --project ejercicios/05-fluent-api/Academia.csproj -- --verificar-sql
 ```
 
-Sin argumentos imprime el SQL sin conectarse. `--verificar` necesita la instancia LocalDB del curso; crea una base temporal propia y la elimina al terminar.
+Sin argumentos imprime el esquema. Las pruebas necesitan la instancia LocalDB del curso; crean bases temporales y las eliminan al terminar.
 
-La configuración muestra claves simples y compuestas, índice único de correo, restricción de edad, relaciones, un objeto `Direccion` con `OwnsOne`, conversión de un enum a texto, precisión decimal, fecha por defecto y un curso ficticio con `HasData`. La columna calculada aplica un factor de ejemplo de 1,21 al costo; no representa una regla fiscal real.
+Incluye claves compuestas, índice único, restricción de edad, `OwnsOne`, conversión de enum, valores por defecto y `HasData`. La columna calculada usa un factor ficticio de 1,21.
 
-Las pruebas leen los valores guardados y comprueban que SQL Server rechace correos duplicados, edades fuera de rango, inscripciones duplicadas y referencias inexistentes. Los rechazos se identifican por los códigos de SQL Server, no por cualquier excepción.
-
-Las bases y sus datos son de práctica. Los archivos del profesor se usan como referencia; este proyecto no es una recuperación de los originales.
+`--verificar` comprueba también los rechazos por duplicados y referencias inválidas. [Vistas y procedimientos almacenados](sql.md).
