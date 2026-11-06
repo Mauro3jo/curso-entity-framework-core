@@ -9,6 +9,7 @@ public class AcademiaDbContext(DbContextOptions<AcademiaDbContext> opciones) : D
     public DbSet<Clase> Clases => Set<Clase>();
     public DbSet<PerfilAcademico> Perfiles => Set<PerfilAcademico>();
     public DbSet<Inscripcion> Inscripciones => Set<Inscripcion>();
+    public DbSet<ReporteInscripciones> Reportes => Set<ReporteInscripciones>();
 
     public static AcademiaDbContext Crear(string nombre) => new(new DbContextOptionsBuilder<AcademiaDbContext>()
         .UseSqlServer($"Server=(localdb)\\CodexEfCoreCurso;Database={nombre};Integrated Security=True;Encrypt=True;TrustServerCertificate=True").Options);
@@ -16,6 +17,7 @@ public class AcademiaDbContext(DbContextOptions<AcademiaDbContext> opciones) : D
     protected override void OnModelCreating(ModelBuilder modelo)
     {
         modelo.HasDefaultSchema("Academico");
+        modelo.Entity<ReporteInscripciones>().HasNoKey().ToView("vw_Inscripciones", "Academico");
         modelo.Entity<Estudiante>(entidad =>
         {
             entidad.ToTable("Estudiantes", tabla => tabla.HasCheckConstraint("CK_Estudiantes_Edad", "[Edad] BETWEEN 18 AND 100"));

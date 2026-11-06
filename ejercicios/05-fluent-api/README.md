@@ -1,5 +1,7 @@
 # 05. Fluent API
 
+Las [vistas y procedimientos almacenados](sql.md) se prueban con `--verificar-sql`.
+
 Modelo académico reconstruido a partir de los temas de `FluentAPI_EFCore10.rar`: estudiantes, perfiles, cursos, clases e inscripciones.
 
 ```powershell
