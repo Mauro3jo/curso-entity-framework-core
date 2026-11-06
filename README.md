@@ -31,6 +31,8 @@ Los proyectos descargados del instructor se conservan aparte como referencia. El
 
 La práctica de [Data Annotations y validaciones](ejercicios/03-validaciones/README.md) incluye comprobaciones ejecutables de entradas válidas e inválidas.
 
+El [blog de relaciones](ejercicios/04-blog/README.md) reconstruye relaciones 1:1, 1:N y N:N y comprueba sus reglas de borrado en SQL Server.
+
 ## Próximas etapas
 
 1. Continuar con el siguiente tema del curso en un ejercicio separado.
